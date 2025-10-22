@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; url=/index.html" />
+    <script>
+      // Preserve path for GitHub Pages and some static hosts
+      (function() {
+        var redirectTo = '/index.html' + (location.search || '') + (location.hash || '');
+        // Handle GitHub Pages where the site may be served from a subpath
+        var base = document.querySelector('base');
+        if (base && base.getAttribute('href')) {
+          var href = base.getAttribute('href').replace(/\/$/, '');
+          redirectTo = href + '/index.html' + (location.search || '') + (location.hash || '');
+        }
+        location.replace(redirectTo);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
